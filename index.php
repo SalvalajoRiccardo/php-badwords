@@ -2,7 +2,7 @@
 
 <?php
     $par = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iure sit quam praesentium magni dolore.';
-
+    $lun = strlen($par);
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +14,16 @@
     <title>PHP Badwords</title>
 </head>
 <body>
-    <h1><?php echo $par ?></h1>
+    <p><?php echo $par ?></p>
+    <h2>lunghezza: <?php echo $lun ?></h2>
+
+    <?php
+        $censurato = $_GET['cens'];
+        $censP = str_replace($censurato, '***', $par);
+        $censPLun = strlen($censP);
+    ?>
+
+    <p><?php echo $censP ?></p>
+    <h2>lunghezza censored: <?php echo $censPLun ?></h2>
 </body>
 </html>
