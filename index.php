@@ -16,10 +16,10 @@
 <body>
     <p><?php echo $par ?></p>
     <h2>lunghezza: <?php echo $lun ?></h2>
-
+    <!-- Una parola da censurare viene passata dall'utente tramite parametro GET. Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre asterischi (***) tutte le occorrenze della parola da censurare. -->
     <?php
         $censurato = $_GET['cens'];
-        $censP = str_replace($censurato, '***', $par);
+        $censP = str_replace( $censurato, '***', $par);
         $censPLun = strlen($censP);
     ?>
 
